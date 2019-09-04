@@ -1,0 +1,35 @@
+<h1>Hit F12 for output</h1>
+
+
+<script>
+
+    function Person(name, age) {
+        
+        this.name = name;
+        this.age = age;
+        this.toString = function () {
+            return 'Person(' + this.name + "," + this.age + ")";
+        };
+
+        this.eat = function (food) {
+            console.log(this.name + ' eats ' + food);
+        }
+
+    }
+
+    // var p2=new Object();
+    // p2.init=createPerson;
+    // p2.init('Shivanshi',13);
+    
+    var p2= new Person('Shivanshi',13);
+    p2.eat('Maggi');
+
+    var p3=new Object();
+    p3.name='Prabhat';
+    p3.eat=p2.eat;
+
+    p3.eat('Lunch');
+
+    
+
+</script>

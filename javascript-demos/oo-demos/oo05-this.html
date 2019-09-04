@@ -1,0 +1,37 @@
+<h1>Hit F12 for output</h1>
+
+
+<script>
+   
+   
+   var p1=new Object();
+   p1.name='Prabhat';
+   p1.age=30;
+   
+
+   function showPerson(x){
+       console.log('Person( Name='+this.name
+                          +',Age='+this.age+")");
+   }
+
+    p1.show=showPerson;   
+
+    p1.show();
+
+   var name='Vivek'; //same as window.name
+    showPerson();
+
+    //works but redundant info p1
+
+    var p2={
+        name:'Prabhat',
+        age:35,
+        show:showPerson //attach method in json object
+    };
+
+    p2.show();
+
+   
+
+
+</script>

@@ -1,0 +1,51 @@
+<h1>Hit F12 for output</h1>
+
+
+<script>
+
+    function Person(name, age) {
+        
+        this.name = name;
+        this.age = age;
+        this.toString = function () {
+            return 'Person(' + this.name + "," + this.age + ")";
+        };
+
+        this.eat = function (food) {
+            console.log(this.name + ' eats ' + food);
+        }
+
+    }
+
+    var p1=new Person("Prabhat",35);
+    var p2=new Person("Shivanshi",13);
+
+    p1.eat('lunch');
+    p2.eat('dinner');
+
+    //attach new method to constructor prototype
+    Person.prototype.move=function(place){
+        console.log(this.name+' goes to '+place);
+    }
+
+    //this method is avaialble to all objects 
+    //created using this constructor
+    //even those objects that have already 
+    //been created
+
+
+    p1.move('office');
+    p2.move('school');
+
+
+    //method attached to individual object
+    p1.drive=function(v){
+        console.log(this.name+' drives '+v);
+    };
+
+    p1.drive('car');
+    p2.drive('bike');
+
+    
+
+</script>

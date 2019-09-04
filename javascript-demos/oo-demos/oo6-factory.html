@@ -1,0 +1,67 @@
+<h1>Hit F12 for output</h1>
+
+
+<script>
+
+    function createPerson(name, age) {
+        var p = new Object();
+        p.name = name;
+        p.age = age;
+        p.toString = function () {
+            return 'Person(' + this.name + "," + this.age + ")";
+        };
+
+        p.eat = function (food) {
+            console.log(this.name + ' eats ' + food);
+        }
+
+        return p;
+
+    }
+
+    var prabhat=createPerson('Prabhat',35);
+    var shivanshi=createPerson('Shivanshi',13);
+
+    prabhat.eat('lunch');
+    shivanshi.eat('snacks');
+
+    console.log('prabhat '+prabhat); //calls prabhat.toString()
+    console.log('shivanshi '+shivanshi );
+    
+
+   
+    function teachDriving(person,veichle){
+
+        if(person.age<18)
+            return console.log(person.name+' you need to wait for '+(18-person.age)+' years to drive');
+
+        if(person.licences)
+            person.licences.push(veichle);
+        else{
+            person.licences=[veichle];
+            person.drive=function(v){
+                for(var i in this.licences){
+                    if(this.licences[i]===v)
+                        return console.log(this.name,'drives', v);
+                }
+
+                return console.log(this.name,'is not licenced to drive ',v);
+            }
+        }
+        console.log(person.name,'you can now drive',veichle);
+    }
+
+
+    teachDriving(prabhat,'Bike'); //will get a licence
+    teachDriving(prabhat,'Car'); //ok! allowed to drive
+
+    teachDriving(shivanshi, 'Bike'); //now allowed
+
+
+    prabhat.drive('Car');
+    prabhat.drive('Truck');
+
+    shivanshi.drive('Bike');
+
+
+</script>

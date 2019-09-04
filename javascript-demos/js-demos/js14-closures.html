@@ -1,0 +1,40 @@
+<h1>Hit F12 for output</h1>
+
+
+<script>
+   
+    function multiplierOf(number){
+
+        //1. we can declare method inside method
+        function multiplyBy(value){
+            //3. a method has access to variables defined in 
+            // its outer function as well
+            // this is called closure
+            return value*number;
+        }
+
+        //2. a method can return a method
+        return multiplyBy;
+    }
+    var m17= multiplierOf(17); // returns function multiplyBy
+    //multiplerOf function is over. so its local variables should be removed from memory
+    // is number live or dead
+
+    console.log('m17(5)',m17(5)); //what is number here?
+    console.log('m17(6)',m17(6));
+
+    var m19=multiplierOf(19); //returns multiplyBy 
+
+    //there are two different instances of multiplyBy method - m17 and m19
+    //each instance remembers a set of value defined in their closure
+
+    console.log('m19(5)',m19(5));
+
+    console.log('m17(5)',m17(5));
+
+    
+
+
+
+
+</script>

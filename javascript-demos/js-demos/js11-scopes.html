@@ -1,0 +1,40 @@
+<h1>Hit F12 for output</h1>
+
+
+<script>
+
+    var g='global'; //explict global variable
+
+    function f1(){
+        var f1l='f1-local'; //explicit local variable
+        console.log('in f1');
+        
+        console.log('g',g);
+        console.log('f1l',f1l);
+        g='global-modifed-byf1';        
+        console.log('---');
+    }
+
+    function f2(){
+        f2l='f2-local'; //implicit global variable
+        console.log('in f2');
+        console.log('g',g);
+        console.log('f2l',f2l);
+        console.log('---');
+    }
+
+    function f3(){
+        console.log('in f3');
+        console.log('g',g);
+        //console.log('f1l',f1l);
+        console.log('f2l',f2l);
+        console.log('---');
+        
+    }
+
+    f1();
+    f2();
+    f3();
+
+   
+</script>

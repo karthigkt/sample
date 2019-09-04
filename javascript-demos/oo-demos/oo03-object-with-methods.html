@@ -1,0 +1,27 @@
+<h1>Hit F12 for output</h1>
+
+
+<script>
+   
+   function showPerson(p){
+       console.log('Person( Name='+p.name+',Age='+p.age+")");
+   }
+
+   var p1=new Object();
+   p1.name='Prabhat';
+   p1.age=30;
+   showPerson(p1);
+
+   //even a function is an object
+    p1.show=showPerson;   
+
+    p1.show(p1);
+
+    //works but redundant info p1
+
+    
+
+   
+
+
+</script>

@@ -1,0 +1,40 @@
+<h1>Hit F12 for output</h1>
+
+
+<script>
+
+    function inner(id, count){
+        for( i=0;i<count;i++)
+            console.log('id',id,'count',i);
+
+        console.log('---')
+    }
+
+    function outer(x,y){
+        for(i=0;i<x;i++)
+            inner(i,y);
+    }
+
+    outer(5, 2);
+    /*
+        id 0 count 0
+        id 0 count 1
+        ---
+        id 1 count 0
+        id 1 count 1
+        ---
+        id 2 count 0
+        id 2 count 1
+        ---
+
+        id 3 count 0
+        id 3 count 1
+        ---
+        id 4 count 0
+        id 4 count 1
+        ---
+
+    */
+
+
+</script>

@@ -1,0 +1,45 @@
+<h1>Hit F12 for output</h1>
+
+
+<script>
+   
+   function showPerson(p){
+       console.log('Person( Name='+p.name+',Age='+p.age+")");
+   }
+
+
+   var p1=new Object();
+   p1.name='Prabhat';
+   p1.age=30;
+   showPerson(p1);
+
+
+   var p2={} ; //same as new Object()
+   p2.name='Shivanshi';
+   p2.age=13;
+   showPerson(p2);
+
+   //JSON notation
+   var p3={             //create object
+       name:'Sanjay',   // set properties
+       age:40
+   };
+   showPerson(p3);
+
+
+   var p4={
+       name:'Shweta'
+   };
+   //dictionary notation
+   p4["age"]=35; //same as p4.age
+
+   showPerson(p4);
+
+   console.log('p1["name"]',p1["name"]);
+   console.log('p1.name',p1.name);
+   
+   
+   
+
+
+</script>
