@@ -1,0 +1,36 @@
+<h1>Hit F12 for output</h1>
+
+
+<script>
+
+    function showBoolean(value){
+        if(value)
+            console.log('true',value);
+        else
+            console.log('false',value);
+    }    
+
+    showBoolean(true);
+    showBoolean(false);
+
+    showBoolean(7>2);
+    showBoolean(7<2);
+
+    showBoolean(29);
+    showBoolean(0.4);
+    showBoolean(-2);
+    showBoolean(0);
+
+    showBoolean('hello world');
+    showBoolean('');
+
+    showBoolean(null);
+    showBoolean(undefined);
+    showBoolean(NaN);
+    showBoolean();
+    showBoolean([]);
+    showBoolean([1,2,3]);
+    showBoolean(new Object());
+    showBoolean(new Date());
+    
+</script>

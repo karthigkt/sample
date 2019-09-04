@@ -1,0 +1,42 @@
+<h1>Hit F12 for output</h1>
+
+
+<script>
+
+    var values=[]; //array
+
+    console.log('typeof(values)',typeof(values));
+    console.log('values.length',values.length);
+
+    var values2=[1,2,3];
+
+    console.log('values2.length',values2.length);
+
+    //can expand by adding more items
+    values2.push(4);
+    values2.push(5);
+
+    console.log('values2.length',values2.length);
+    
+    console.log('values2',values2);
+
+    //array can hold any time of item
+    //not necessarily a particular type
+    values2.push('hello');
+    values2.push(true);
+    values2.push(new Date());
+    values2.push([1,2,3]);
+
+    console.log('values2',values2);
+    
+    values2.splice(2,2); //remove 2 items from index 2 onward
+
+    //values 3 and 4 should be removed
+
+    console.log('values2',values2);
+    
+
+    
+
+   
+</script>

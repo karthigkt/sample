@@ -1,0 +1,29 @@
+<h1>Hit F12 for output</h1>
+
+
+<script>
+
+    function average(x,y){
+        //aruments array stores all supplied arguments
+        //including formal parameters x and y
+        var sum=0;
+        for(var i in arguments)
+            sum+=arguments[i];
+
+        return sum/arguments.length;
+        
+    }
+
+    console.log('average(2,9)',average(2,9));
+
+    console.log('average(2,9,100,200,300)',
+    average(2,9,100,200,300));
+
+    console.log('average(2)',average(2));
+
+    console.log('average()',average());
+
+    console.log('average(1,2,3,4,5)',average(1,2,3,4,5));
+    
+    
+</script>
