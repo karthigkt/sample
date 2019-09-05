@@ -14,7 +14,7 @@ class Person{
     toString(){
         //return 'Person('+this.name+","+this.age+')';
         return `
-            Name=${this.name}
+            Name=${this.name.toUpperCase()}
             Age=${this.age}
         `;
     }
@@ -22,6 +22,8 @@ class Person{
 
 p1=new Person('Prabhat',35);
 p2=new Person('Shivanshi',13);
+
+console.log('p1.toString()',p1.toString());
 
 p1.drive=function(v){
     //console.log(this.name+' drives '+v);
