@@ -69,14 +69,25 @@ function range(min=0,max){
 
     let event=new EventEmitter();
 
+    let value;
+    let i;
     setTimeout(()=>{
+        value=min;
+        i=setInterval(()=>{
+            
+            if(value<max){
+                event.emit('number',value);
+                value++;
+            }
+            else{
+                event.emit('end');
+                clearInterval(i);
+            }
 
-        for(let count=min;count<=max;count++){
-            event.emit('number', count);
+        },5);
+        
 
-        }
 
-        event.emit('end');
 
     },5); //gives client sometime to write the .on() handler
 
@@ -96,6 +107,12 @@ function range(min=0,max){
 //     };
 
 //NodeJS export
+
+
+
+
+
+
 
 module.exports.search=search;  //this module is exporting search() functions
 module.exports.show=show;

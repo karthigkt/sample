@@ -1,1 +1,1 @@
-etchPrimes(min,max,label)
+.pipe(process.stdout);
