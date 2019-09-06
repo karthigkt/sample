@@ -1,0 +1,16 @@
+const {range}=require('./libs/utils');
+
+
+let sum=0;
+let count=0;
+let average=0;
+range(1,100)
+	.on('number',{ 
+		number=>sum+=number;
+		count++;
+	})
+	.on('end', ()=>average=sum/count );
+
+
+//where should you print sum and average?
+
