@@ -87,6 +87,9 @@ function range(min=0,max){
 
 
 
+
+
+
 //unsupported ES2015 feature
 // export {
 //         search:search
