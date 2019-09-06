@@ -63,6 +63,30 @@ function show(header, ...objects){
 
 }
 
+const {EventEmitter}=require('events');
+
+function range(min=0,max){
+
+    let event=new EventEmitter();
+
+    setTimeout(()=>{
+
+        for(let count=min;count<=max;count++){
+            event.emit('number', count);
+
+        }
+
+        event.emit('end');
+
+    },5); //gives client sometime to write the .on() handler
+
+    return event;
+
+}
+
+
+
+
 //unsupported ES2015 feature
 // export {
 //         search:search
@@ -73,6 +97,6 @@ function show(header, ...objects){
 module.exports.search=search;  //this module is exporting search() functions
 module.exports.show=show;
 module.exports.showList=showList;
-
+module.exports.range=range;
 //getLine() and printSingle() is not exported
 //they can't be accessed outside this file

@@ -1,1 +1,1 @@
-console.log(label);
+etchPrimes(min,max,label)
