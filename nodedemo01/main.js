@@ -31,7 +31,23 @@ console.log('typeof(dinkarBookList)',typeof(dinkarBookList));
 util.showList('Books written by Dinkar', dinkarBooks); //nothing left in generator to show
 
 
+// var priceRange=function(book){
+//     return book.price>=200 && book.price<300;
+// }
 
+
+//var priceRange= function(book) { return book.price>=200 && book.price<300; };
+
+// var priceRange= (book) => { 
+//     return book.price>=200 && book.price<300; 
+// };
+
+//var priceRange= book =>   book.price>=200 && book.price<300;
+
+
+
+let result=util.search(books, book =>   book.price>=200 && book.price<300);
+util.showList('Books in Price range 200-300', result);
 
 
 
