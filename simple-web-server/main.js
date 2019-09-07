@@ -23,8 +23,7 @@ app.use((req,res,next)=>{
 });
 */
 
-
-//serve static files from public folder
+app.use( express.static("./public"));
 
 
 app.get("/",(req,res)=>{
@@ -32,7 +31,7 @@ app.get("/",(req,res)=>{
     app.render('movielist',{});
 });
 
-app.use( express.static("./public"));
+
 
 app.get('/stats',(req,res)=>{
 

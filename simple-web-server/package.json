@@ -2,20 +2,14 @@
   "name": "movie-node",
   "version": "1.0.0",
   "description": "",
-  "main": "app/main.js",
+  "main": "index.js",
   "scripts": {
-    "development": ".\\node_modules\\.bin\\nodemon ./app/main.js",
-    "production": "node ./app/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^1.19.2"
-  },
   "dependencies": {
-    "dotenv": "^8.1.0",
     "ejs": "^2.7.1",
     "express": "^4.17.1"
   }
